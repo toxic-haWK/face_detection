@@ -2,11 +2,11 @@
 import cv2
   
 face_cascade = cv2.CascadeClassifier('haar_face.xml')
-img = cv2.imread('Ben Afflek .jpeg')
+#img = cv2.imread('Ben Afflek .jpeg')
 cap = cv2.VideoCapture(0)
 
 while cap.isOpened():
-    #_, img = cap.read()
+    _, img = cap.read()
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.1, 2)
